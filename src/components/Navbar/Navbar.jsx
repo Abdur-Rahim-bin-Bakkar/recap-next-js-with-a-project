@@ -4,6 +4,7 @@ import React from 'react';
 import logo from '../../../public/images/logo.png'
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { FaGithub } from 'react-icons/fa';
 
 const Navbar = () => {
     const pathName = usePathname()
@@ -39,7 +40,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-linear-to-br to-[#632EE3] from-[#9F62F2] text-white font-bold ">Contribute</a>
+                    <a className="btn bg-linear-to-br to-[#632EE3] from-[#9F62F2] text-white font-bold ">
+                        <FaGithub className='text-lg'/> Contribute</a>
                 </div>
             </div>
         </div>

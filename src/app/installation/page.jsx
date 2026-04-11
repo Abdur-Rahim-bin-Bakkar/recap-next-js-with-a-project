@@ -1,4 +1,7 @@
 import React from 'react';
+export const metadata = {
+    title:"install application"
+}
 
 const InstallationPage = () => {
     return (
