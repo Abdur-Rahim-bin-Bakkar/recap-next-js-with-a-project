@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Hero = () => {
     return (
         <div className='bg-[#D2D2D220]'>
-            <div className="max-w-11/12 py-10">
+            <div className="max-w-11/12 mx-auto pt-10">
                 <h1 className='text-4xl font-bold text-center bg-linear-to-br to-[#632EE3] from-[#9F62F2] bg-clip-text'>We Build <br />
                     <span className='text-transparent'>Productive</span> Apps</h1>
 
