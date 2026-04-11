@@ -1,13 +1,16 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
 import logo from '../../../public/images/logo.png'
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+    const pathName = usePathname()
     const links = <>
-        <Link href={'/'}>Home</Link>
-        <Link href={'/apps'}>Apps</Link>
-        <Link href={'installation'}>Installation</Link>
+        <Link className={`${pathName === '/' && 'text-success font-bold underline'}`} href={'/'}>Home</Link>
+        <Link className={`${pathName === '/apps' && 'text-success font-bold underline'}`} href={'/apps'}>Apps</Link>
+        <Link className={`${pathName === '/installation' && 'text-success font-bold underline'}`} href={'installation'}>Installation</Link>
     </>
     return (
         <div>
