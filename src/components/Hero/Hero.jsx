@@ -15,17 +15,17 @@ const Hero = () => {
 
 
                 <div className="my-10 flex justify-center items-center gap-4">
-                    <button className='btn'>
+                    <button className='btn  hover:-translate-y-1 duration-900 shadow-2xl'>
                         <Image src={playstor} alt={'play stor logo'} width={20} height={20} />
                         Google Play
                     </button>
-                    <button className='btn'>
+                    <button className='btn hover:-translate-y-1 duration-900 shadow-2xl'>
                         <Image src={appstor} alt={'app stor logo'} width={20} height={20} />
                         Google Play
                     </button>
                 </div>
 
-                <Image src={hero} alt='hero image' className='max-w-[65%] mx-auto'/>
+                <Image src={hero} alt='hero image' className='max-w-[65%] mx-auto' />
             </div>
         </div>
     );
