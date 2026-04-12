@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaCloudDownloadAlt, FaStar } from 'react-icons/fa';
 // import { useNavigate } from 'react-router';
@@ -9,8 +10,9 @@ const AppCard = ({ app }) => {
     // const handelDet = () => {
     //     naavigate(`/ditelles/${app.id}`)
     // }
+    console.log('hi i am card')
     return (
-        <div className='card p-3 rounded-2xl bg-white'>
+        <Link href={`/apps/${app.id}`} className='card p-3 rounded-2xl bg-white'>
             <Image src={app.image} alt='app image' width={100} height={100} className='w-full rounded-lg max-h-80 object-contain'  />
             <div className="card-body">
                 <h1 className='text-lg font-bold'>{app.title}</h1>
@@ -25,7 +27,7 @@ const AppCard = ({ app }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
