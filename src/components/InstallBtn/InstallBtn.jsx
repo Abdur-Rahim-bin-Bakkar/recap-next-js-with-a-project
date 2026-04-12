@@ -1,17 +1,20 @@
 'use client'
 import { InstallContext } from '@/app/lib/providers';
 import React, { useContext, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const InstallBtn = ({ expectedData }) => {
     const [ins, setIns] = useState()
     const handelInistall = () => {
-        setIns(true)
         const find = inistallApps.find(app => app.id === expectedData.id)
+        setIns(true)
         console.log(find)
         if (find) {
+            toast.error(`already installed ${expectedData.title}`)
             return
         }
         setInstallApps([...inistallApps, expectedData])
+        toast.success(`successfully installed ${expectedData.title}`)
     }
     const { inistallApps, setInstallApps } = useContext(InstallContext)
     // console.log(data)
