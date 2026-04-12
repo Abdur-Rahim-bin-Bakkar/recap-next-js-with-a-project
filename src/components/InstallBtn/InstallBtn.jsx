@@ -17,8 +17,6 @@ const InstallBtn = ({ expectedData }) => {
         toast.success(`successfully installed ${expectedData.title}`)
     }
     const { inistallApps, setInstallApps } = useContext(InstallContext)
-    // console.log(data)
-    console.log(inistallApps)
     return (
         <div>
             <button disabled={ins} onClick={handelInistall} className="btn bg-[#00D390] text-white font-semibold max-w-50">{!ins ? `Install Now (${expectedData.size} MB)` : "Already inistalled"}</button>

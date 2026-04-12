@@ -11,7 +11,7 @@ const Navbar = () => {
     const links = <>
         <Link className={`${pathName === '/' && 'text-success font-bold underline'}`} href={'/'}>Home</Link>
         <Link className={`${pathName === '/apps' && 'text-success font-bold underline'}`} href={'/apps'}>Apps</Link>
-        <Link className={`${pathName === '/installation' && 'text-success font-bold underline'}`} href={'installation'}>Installation</Link>
+        <Link className={`${pathName === '/installation' && 'text-success font-bold underline'}`} href={'/installation'}>Installation</Link>
     </>
     return (
         <div>
