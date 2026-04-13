@@ -3,6 +3,7 @@ import logo from '../../../public/images/logo.png'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import Image from 'next/image';
+import Link from 'next/link';
 const Footer = () => {
     return (
         <div className="bg-[#001931] ">
@@ -16,11 +17,16 @@ const Footer = () => {
                         <h3 className='text-white font-bold'>Social Links</h3>
                         <div className="flex gap-4 mt-4 items-center">
                             <span className='bg-white w-8 h-8 flex justify-center items-center rounded-full cursor-pointer  hover:scale-120 duration-700'>
-                                <FaXTwitter className='' />
+                                <FaXTwitter className='hover:text-red-700' />
                             </span>
-                            <FaLinkedin className='text-white text-4xl cursor-pointer  hover:scale-120 duration-700' />
+                            <Link href={'https://www.linkedin.com/in/fswd-abdur-rahim-bin-bakkar/'}>
+                                <FaLinkedin className='text-white text-4xl cursor-pointer  hover:scale-120 duration-700 hover:text-sky-700' />
+                            </Link>
+                            <Link href={'https://www.facebook.com/profile.php?id=61582681106407'}>
+                                <FaFacebook className='text-white text-4xl cursor-pointer  hover:scale-120 duration-700  hover:text-sky-700' />
+                            </Link>
 
-                            <FaFacebook className='text-white text-4xl cursor-pointer  hover:scale-120 duration-700' />
+
                         </div>
                     </div>
                 </div>
