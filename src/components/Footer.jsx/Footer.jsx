@@ -5,7 +5,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import Image from 'next/image';
 const Footer = () => {
     return (
-        <div className="bg-[#001931]">
+        <div className="bg-[#001931] ">
             <div className='max-w-11/12 pt-4 mx-auto'>
                 <div className="flex justify-between py-4 items-start">
                     <div className="flex gap-2 items-center">

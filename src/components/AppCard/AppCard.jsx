@@ -12,7 +12,7 @@ const AppCard = ({ app }) => {
     // }
     console.log('hi i am card')
     return (
-        <Link href={`/apps/${app.id}`} className='card p-3 rounded-2xl bg-white'>
+        <Link href={`/apps/${app.id}`} className='card p-3 rounded-2xl bg-white hover:-translate-y-1'>
             <Image src={app.image} alt='app image' width={100} height={100} className='w-full rounded-lg max-h-80 object-contain'  />
             <div className="card-body">
                 <h1 className='text-lg font-bold'>{app.title}</h1>

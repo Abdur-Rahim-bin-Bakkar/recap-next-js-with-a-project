@@ -40,8 +40,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-linear-to-br to-[#632EE3] from-[#9F62F2] text-white font-bold ">
-                        <FaGithub className='text-lg'/> Contribute</a>
+                    <Link href={'https://github.com/Abdur-Rahim-bin-Bakkar'} className="btn bg-linear-to-br to-[#632EE3] from-[#9F62F2] text-white font-bold ">
+                        <FaGithub className='text-lg'/> Contribute</Link>
                 </div>
             </div>
         </div>

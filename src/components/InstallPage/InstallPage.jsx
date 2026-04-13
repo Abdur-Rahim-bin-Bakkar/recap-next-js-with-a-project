@@ -23,12 +23,12 @@ const InstallPage = () => {
         }
     }
     return (
-        <div className='mt-10'>
+        <div className='mt-10 '>
             <div className="flex justify-between">
-                <h1>{inistallApps.length} Apps Found</h1>
+                <h1 className='font-bold text-lg'>{inistallApps.length} Apps Found</h1>
                 <div className="">
-                    <select  onClick={handelSelect} defaultValue="Pick a text editor" className="select select-primary">
-                        <option disabled={true}>Pick a text editor</option>
+                    <select  onClick={handelSelect} defaultValue="sort by" className="select select-primary">
+                        <option disabled={true}>Sort by</option>
                         <option value={'high'} >Sort By High Size</option>
                         <option value={'low'} >Sort By Low Size</option>
                         

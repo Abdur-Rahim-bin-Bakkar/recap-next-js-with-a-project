@@ -10,7 +10,7 @@ const InstallCard = ({ app, setInstallApps, inistallApps }) => {
         toast.warning(`uninstall ${app.title}`)
     }
     return (
-        <div className='card p-2 mt-3 flex justify-between items-center bg-white flex-row'>
+        <div className='card p-2 mt-3 flex justify-between items-center bg-white flex-row hover:-translate-y-1 hover:shadow-amber-400'>
             <div className="flex gap-3 items-center">
                 <Image src={app.image} height={45} width={45} alt='app logo' />
                 <div className="">
