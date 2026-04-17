@@ -9,7 +9,7 @@ const Dashboard = () => {
     // console.log(inistallApps)
     const finalData = [
         {name:'Inistalled', value: inistallApps.length, fill:"#000"},
-        {name:'Inistalled', value: data.length, fill:"#FF8811"},
+        {name:'all aps', value: data.length, fill:"#FF8811"},
     ]
     const ho = useFetch()
     console.log(ho)

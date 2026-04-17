@@ -1,28 +1,42 @@
 import Chart from '@/components/Chart/Chart';
 import DetCard from '@/components/DetCard';
+import { notFound } from 'next/navigation';
 import React, { use } from 'react';
 import { BarChart } from 'recharts';
 // import { BarChart, XAxis, YAxis } from 'recharts';
 // import { metadata } from './../../layout';
 
 
-export const metadata = {
-    title: "details of the "
+export async function generateMetadata({ params }) {
+    const data = await fetch('https://mocki.io/v1/e21d346b-58f4-4402-8d89-a9763c19f2d2')
+    const app = await data.json()
+    const id = await params
+    const dynamicId = id.id
+    const expectedApp = app.find(ap => ap.id === Number(dynamicId))
+
+    if (!expectedApp) {
+        return {
+            title: `not found the web application`,
+        }
+    }
+
+    return {
+        title: `${expectedApp.title} || web application`,
+        description: `${expectedApp.description}`
+    }
 }
-// const data = fetch('https://mocki.io/v1/e21d346b-58f4-4402-8d89-a9763c19f2d2').then(res => res.json())
+
 
 
 const AppsDetailsPage = async ({ params }) => {
     const data = await fetch('https://mocki.io/v1/e21d346b-58f4-4402-8d89-a9763c19f2d2')
     const app = await data.json()
-    // console.log(app)
     const id = await params
     const dynamicId = id.id
-    // console.log(dynamicId)
-    // const app = use(data)
-
     const expectedApp = app.find(ap => ap.id === Number(dynamicId))
-    // console.log(expectedApp)
+    if (!expectedApp) {
+        notFound()
+    }
 
 
 
